@@ -1,13 +1,13 @@
 import "./Banner.css";
 const Banner = () => {
   return (
-    <div className="heroImage">
-      <div className="space-y-8">
-        <h1 className="text-6xl font-bold text-white text-center mx-auto">
+    <div className="heroImage flex  justify-center items-center  py-24">
+      <div className="space-y-4 lg:space-y-8">
+        <h1 className="text-4xl lg:text-6xl font-bold lg:w-3/4 text-white  text-center mx-auto">
           Discover an exceptional cooking class tailored for you!
         </h1>
 
-        <p className="text-white w-2/3  text-center mx-auto">
+        <p className="text-white p-4 lg:w-2/3  text-center mx-auto">
           Learn and Master Basic Programming, Data Structures, Algorithm, OOP,
           Database and solve 500+ coding problems to become an exceptionally
           well world-class Programmer.

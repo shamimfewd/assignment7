@@ -9,7 +9,7 @@ const Main = () => {
   const [cartItems, setCartItems] = useState([]);
 
   const handleCartBtn = (recipe) => {
-    const existingItem = cartItems.find((item) => item.id === recipe.id);
+    const existingItem = cartItems.find((item) => item.recipe_id === recipe.recipe_id);
     if (!existingItem) {
       setCartItems([...cartItems, recipe]);
     } else {
@@ -21,7 +21,7 @@ const Main = () => {
     <div>
       <div className="my-24 text-center mx-auto">
         <h2 className="text-4xl font-bold mb-6">Our Recipes</h2>
-        <p className="w-2/3 mx-auto">
+        <p className=" lg:w-2/3 p-4 mx-auto">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
           aliquid obcaecati ullam ut est beatae aliquam sapiente ipsam illum,
           assumenda fugit excepturi fuga cum atque hic nam ea, maxime repellat!
