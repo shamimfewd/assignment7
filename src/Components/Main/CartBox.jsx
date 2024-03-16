@@ -1,10 +1,11 @@
 import "../Styles/CartBox.css";
 
 const CartBox = ({ cartItems }) => {
-  console.log(cartItems);
   return (
-    <div className="border">
-      <h3 className="text-3xl ">Want to Cook: {cartItems.length}</h3>
+    <div className="border p-4 rounded-md">
+      <h3 className="text-3xl mb-2 text-center font-bold">
+        Want to Cook: {cartItems.length}
+      </h3>
       <div>
         <table className="styled-table">
           <thead>
@@ -24,7 +25,7 @@ const CartBox = ({ cartItems }) => {
                 <td>{item.preparing_time}</td>
                 <td>{item.calories}</td>
                 <td>
-                  <button className=" btn rounded-full bg-[#0BE58A] text-white">
+                  <button className=" btn rounded-full bg-[#0BE58A] ">
                     Preparing
                   </button>
                 </td>
