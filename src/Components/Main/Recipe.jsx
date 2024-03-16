@@ -1,5 +1,6 @@
 import { MdOutlineAccessTime } from "react-icons/md";
 import { RiFireLine } from "react-icons/ri";
+import PropTypes from "prop-types";
 
 const Recipe = ({ recipe, handleCartBtn }) => {
   const {
@@ -63,12 +64,9 @@ const Recipe = ({ recipe, handleCartBtn }) => {
   );
 };
 
-export default Recipe;
+Recipe.propTypes = {
+  recipe: PropTypes.object,
+  handleCartBtn: PropTypes.func,
+};
 
-//   https://ibb.co/dWXQg5z
-// https://ibb.co/ZKm5y61
-// https://ibb.co/7zpDVjY
-// https://ibb.co/GT5zT1Q
-// https://ibb.co/Q6QdkpZ
-// https://ibb.co/ysdbYmL
-// https://ibb.co/LJxbMTj
+export default Recipe;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Recipe from "./Recipe";
+import PropTypes from "prop-types";
 
 const Recipes = ({ handleCartBtn }) => {
   const [recipes, setRecipes] = useState([]);
@@ -17,6 +18,10 @@ const Recipes = ({ handleCartBtn }) => {
       ))}
     </div>
   );
+};
+
+Recipes.propTypes = {
+  handleCartBtn: PropTypes.func.isRequired,
 };
 
 export default Recipes;
