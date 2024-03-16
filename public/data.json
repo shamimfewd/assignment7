@@ -1,7 +1,7 @@
 [
     {
       "recipe_image": "chicken_curry.jpg",
-      "recipe_id": 1,
+      "id": 1,
       "recipe_name": "Spicy Chicken Curry",
       "short_description": "A flavorful and spicy chicken curry dish.",
       "ingredients": ["550 g chicken", "120 ml soy sauce", "200 g basil leaf", "400 g mushroom"],
@@ -10,7 +10,7 @@
     },
     {
       "recipe_image": "pasta.jpg",
-      "recipe_id": 2,
+      "id": 2,
       "recipe_name": "Creamy Mushroom Pasta",
       "short_description": "Delicious creamy pasta with mushrooms.",
       "ingredients": ["300 g pasta", "200 g mushrooms", "100 ml cream", "50 g parmesan cheese"],
@@ -19,7 +19,7 @@
     },
     {
       "recipe_image": "salad.jpg",
-      "recipe_id": 3,
+      "id": 3,
       "recipe_name": "Greek Salad",
       "short_description": "A refreshing salad with Greek flavors.",
       "ingredients": ["200 g lettuce", "100 g feta cheese", "150 g olives", "1 cucumber"],
@@ -28,7 +28,7 @@
     },
     {
       "recipe_image": "smoothie.jpg",
-      "recipe_id": 4,
+      "id": 4,
       "recipe_name": "Mixed Berry Smoothie",
       "short_description": "A healthy and fruity smoothie blend.",
       "ingredients": ["100 g strawberries", "100 g blueberries", "1 banana", "200 ml yogurt"],
@@ -37,7 +37,7 @@
     },
     {
       "recipe_image": "burger.jpg",
-      "recipe_id": 5,
+      "id": 5,
       "recipe_name": "Classic Beef Burger",
       "short_description": "Juicy beef burger with classic toppings.",
       "ingredients": ["200 g ground beef", "2 burger buns", "50 g cheddar cheese", "Lettuce, tomato, onion"],
@@ -46,7 +46,7 @@
     },
     {
       "recipe_image": "cake.jpg",
-      "recipe_id": 6,
+      "id": 6,
       "recipe_name": "Chocolate Cake",
       "short_description": "Decadent chocolate cake for dessert lovers.",
       "ingredients": ["200 g flour", "100 g cocoa powder", "150 g sugar", "150 ml milk"],
