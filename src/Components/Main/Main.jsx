@@ -1,9 +1,7 @@
 import { useState } from "react";
-// import CartBox from "./CartBox";
 import "../Styles/CartBox.css";
 import Recipes from "./Recipes";
 import { ToastContainer, toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
 
 const Main = () => {
@@ -12,6 +10,7 @@ const Main = () => {
   const [sumTimes, setSumTimes] = useState(0);
   const [sumCalories, setSumCalories] = useState(0);
 
+  // want to cook button----------------------------
   const handleCartBtn = (recipe) => {
     const existingItem = cartItems.find(
       (item) => item.recipe_id === recipe.recipe_id
@@ -23,6 +22,7 @@ const Main = () => {
     }
   };
 
+  // preparing button-------------------------------
   const handlePreparingCart = (currentItem) => {
     const removeCart = cartItems.filter(
       (item) => item.recipe_id !== currentItem.recipe_id
@@ -38,8 +38,6 @@ const Main = () => {
     setSumCalories(totalCalories);
   };
 
-  console.log(sumTimes);
-
   return (
     <div>
       <div className="my-24 text-center mx-auto">
@@ -51,12 +49,13 @@ const Main = () => {
           savored.
         </p>
       </div>
-
+      {/* =============Recipes Cards Area=============================== */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         <div className="col-span-7 mr-4">
           <Recipes handleCartBtn={handleCartBtn}></Recipes>
         </div>
-        {/* ===================================================== */}
+
+        {/* =========== Want to Cook Area================================================= */}
         <div className="col-span-5 ml-4 ">
           <div
             className="border-collapse border border-gray-400 rounded-md
@@ -97,7 +96,7 @@ const Main = () => {
               </table>
             </div>
 
-            {/* ================================================= */}
+            {/* =============Currently Cooking Area==================================== */}
             <div className="mt-6">
               <h3 className="text-3xl mb-2 text-center font-bold">
                 Currently Cooking: {currentCooking.length}
@@ -140,11 +139,3 @@ const Main = () => {
 };
 
 export default Main;
-
-// let arrayOfObjects = [
-//     { id: 1, name: "John" },
-//     { id: 2, name: "Alice" },
-//     { id: 3, name: "Bob" }
-// ];
-// arrayOfObjects = arrayOfObjects.filter(obj => obj.id !== 2);
-// setCart(arrayOfObjects)

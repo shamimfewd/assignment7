@@ -1,0 +1,7 @@
+.heroImage {
+    background: url("../../Image/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+  }
+  
