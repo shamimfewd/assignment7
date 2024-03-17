@@ -14,7 +14,7 @@ const Recipe = ({ recipe, handleCartBtn }) => {
 
   return (
     <div className="">
-      <div className="card  bg-base-100 shadow-xl">
+      <div className="card h-[40rem]  bg-[#F2F2F2] shadow-xl">
         <figure className="">
           <img
             className="w-full h-[200px] object-cover"
@@ -25,14 +25,14 @@ const Recipe = ({ recipe, handleCartBtn }) => {
 
         <div className="card-body">
           <h2 className="card-title text-[#000000dd]">{recipe_name}</h2>
-          <p className="text-[#000000dd]">{short_description}</p>
+          <p className="text-[#000000bf]">{short_description}</p>
           <hr />
           <h4 className="font-bold text-[#000000dd]">
             Ingredients: {ingredients.length}
           </h4>
 
           <div className="ml-8 text-[#000000cd]">
-            <ul style={{ listStyleType: "disc" }}>
+            <ul style={{ listStyleType: "disc" }} className="text-[#000000b8]">
               {ingredients.map((ingredient, index) => (
                 <li key={index}>{ingredient}</li>
               ))}
@@ -42,11 +42,11 @@ const Recipe = ({ recipe, handleCartBtn }) => {
           <div className="flex justify-between items-center font-bold text-gray-500">
             <p className="flex items-center gap-2">
               <MdOutlineAccessTime />
-              <span>{preparing_time}</span>
+              <span>{preparing_time} minutes</span>
             </p>
             <p className="flex items-center gap-2">
               <RiFireLine />
-              <span>{calories}</span>
+              <span>{calories} calories</span>
             </p>
           </div>
 

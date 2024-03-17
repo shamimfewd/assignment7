@@ -10,7 +10,7 @@ const Recipes = ({ handleCartBtn }) => {
       .then((data) => setRecipes(data));
   }, []);
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 mx-auto gap-6 ">
+    <div className="grid grid-cols-1 lg:grid-cols-2 mb-32 mx-auto gap-6 ">
       {recipes.map((recipe, index) => (
         <div key={index}>
           <Recipe recipe={recipe} handleCartBtn={handleCartBtn}></Recipe>

@@ -8,7 +8,9 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Main = () => {
   const [cartItems, setCartItems] = useState([]);
-  const [cartItems2, setCartItems2] = useState([]);
+  const [currentCooking, setCurrentCooking] = useState([]);
+  const [sumTimes, setSumTimes] = useState(0);
+  const [sumCalories, setSumCalories] = useState(0);
 
   const handleCartBtn = (recipe) => {
     const existingItem = cartItems.find(
@@ -21,22 +23,32 @@ const Main = () => {
     }
   };
 
-  const handlePreparingCart = (curItem) => {
+  const handlePreparingCart = (currentItem) => {
     const removeCart = cartItems.filter(
-      (item) => item.recipe_id !== curItem.recipe_id
+      (item) => item.recipe_id !== currentItem.recipe_id
     );
-    setCartItems2([...cartItems2, curItem]);
+    setCurrentCooking([...currentCooking, currentItem]);
     setCartItems(removeCart);
+
+    const totalTime = parseInt(sumTimes) + parseInt(currentItem.preparing_time);
+    setSumTimes(totalTime);
+
+    const totalCalories =
+      parseInt(sumCalories) + parseInt(currentItem.calories);
+    setSumCalories(totalCalories);
   };
+
+  console.log(sumTimes);
 
   return (
     <div>
       <div className="my-24 text-center mx-auto">
         <h2 className="text-4xl font-bold mb-6">Our Recipes</h2>
-        <p className=" lg:w-2/3 p-4 mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          aliquid obcaecati ullam ut est beatae aliquam sapiente ipsam illum,
-          assumenda fugit excepturi fuga cum atque hic nam ea, maxime repellat!
+        <p className=" lg:w-2/3 p-4 mx-auto  text-[#000000bf]">
+          Delight in a culinary journey with Chocolate Cake, Classic Beef
+          Burger, Mixed Berry Smoothie, Greek Salad, Creamy Mushroom Pasta, and
+          Spicy Chicken Curry—each dish a delicious experience waiting to be
+          savored.
         </p>
       </div>
 
@@ -46,9 +58,11 @@ const Main = () => {
         </div>
         {/* ===================================================== */}
         <div className="col-span-5 ml-4 ">
-          <div className="border-collapse border border-gray-400 rounded-md
-          ">
-            <h3 className="text-3xl mb-2 text-center font-bold">
+          <div
+            className="border-collapse border border-gray-400 rounded-md
+          "
+          >
+            <h3 className="text-3xl mb-2 text-center mt-4 font-bold">
               Want to Cook: {cartItems.length}
             </h3>
             <div>
@@ -86,7 +100,7 @@ const Main = () => {
             {/* ================================================= */}
             <div className="mt-6">
               <h3 className="text-3xl mb-2 text-center font-bold">
-                Currently Cooking: {cartItems2.length}
+                Currently Cooking: {currentCooking.length}
               </h3>
               <div>
                 <table className="styled-table">
@@ -100,7 +114,7 @@ const Main = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {cartItems2.map((item, index) => (
+                    {currentCooking.map((item, index) => (
                       <tr key={index}>
                         <td>{index + 1}</td>
                         <td>{item.recipe_name}</td>
@@ -111,12 +125,11 @@ const Main = () => {
                   </tbody>
                 </table>
               </div>
+              <div className="my-4 p-2">
+                <h3>Total Times = {sumTimes}</h3>
+                <h3>Total Calories = {sumCalories}</h3>
+              </div>
             </div>
-
-            {/* <CartBox
-            handlePreparingCart={handlePreparingCart}
-            cartItems={cartItems}
-          ></CartBox> */}
           </div>
         </div>
       </div>

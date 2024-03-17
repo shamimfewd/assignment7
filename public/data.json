@@ -12,8 +12,8 @@
       "1 onion (chopped)",
       "3 cloves garlic (minced)"
     ],
-    "preparing_time": "45 min",
-    "calories": "380 calories"
+    "preparing_time": 45,
+    "calories": 380
   },
   {
     "recipe_image": "https://danosseasoning.com/wp-content/uploads/2022/05/mushroom-pasta-1024x767.jpg",
@@ -28,8 +28,8 @@
       "1 tbsp olive oil",
       "2 cloves garlic (minced)"
     ],
-    "preparing_time": "25 min",
-    "calories": "450 calories"
+    "preparing_time": 25,
+    "calories": 450
   },
   {
     "recipe_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDW3DoMK8F9eaJE4O4MhI2ON6A89CDIX22ww&usqp=CAU",
@@ -44,8 +44,8 @@
       "1 tomato (diced)",
       "1/2 red onion (thinly sliced)"
     ],
-    "preparing_time": "15 min",
-    "calories": "180 calories"
+    "preparing_time": 15,
+    "calories": 180
   },
   {
     "recipe_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqArFwuxTZgyoZjtcTP3bPbnsWyhXahI-rA&usqp=CAU",
@@ -60,8 +60,8 @@
       "1 tbsp honey",
       "1/2 cup ice cubes"
     ],
-    "preparing_time": "10 min",
-    "calories": "220 calories"
+    "preparing_time": 10,
+    "calories": 220
   },
   {
     "recipe_image": "https://ux2cms.imgix.net/images/Classic-beef-burger.jpg?w=725&auto=compress,format&blend=https://ux2cms.imgix.net/system-images/gray-overlay-large.png?bs=inherit&balph=0&bm=normal",
@@ -76,8 +76,8 @@
       "1 tbsp ketchup",
       "1 tbsp mustard"
     ],
-    "preparing_time": "20 min",
-    "calories": "550 calories"
+    "preparing_time": 20,
+    "calories": 550
   },
   {
     "recipe_image": "https://livforcake.com/wp-content/uploads/2017/07/black-forest-cake-thumb-480x270.jpg",
@@ -92,7 +92,7 @@
       "100 g butter",
       "2 eggs"
     ],
-    "preparing_time": "50 min",
-    "calories": "300 calories"
+    "preparing_time": 50,
+    "calories": 300
   }
 ]
